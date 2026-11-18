@@ -12,8 +12,9 @@ export default defineConfig({
       runWorkerFirst: ["/*", "!/_next/static/*", "!/*/_next/static/*"],
     },
     env: {
-      ASSETS: bindings.assets(),
-      IMAGES: bindings.images(),
+     ASSETS: bindings.assets(),
+  IMAGES: bindings.images(),
+  DATABASE_URL: bindings.secret(),
     },
   }),
 });

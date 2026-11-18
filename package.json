@@ -4,6 +4,7 @@
 	"private": true,
 	"packageManager": "npm",
 	"dependencies": {
+		"@neondatabase/serverless": "^1.2.1",
 		"@vinext/cloudflare": "latest",
 		"react": "latest",
 		"react-dom": "latest",
@@ -11,7 +12,7 @@
 		"vinext": "latest"
 	},
 	"devDependencies": {
-		"@cloudflare/vite-plugin": "beta",
+		"@cloudflare/vite-plugin": "^2.0.0-rc.1",
 		"@tailwindcss/postcss": "latest",
 		"@types/node": "latest",
 		"@types/react": "latest",
@@ -28,7 +29,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"start": "vite preview",
-		"deploy": "vinext-cloudflare deploy",
+		"deploy": "cf deploy",
 		"preview": "npm run build && npm run start --",
 		"cf-typegen": "cf workers types"
 	}
