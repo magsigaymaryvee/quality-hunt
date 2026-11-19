@@ -24,6 +24,7 @@ export async function getStudioItems(): Promise<StudioItem[]> {
     from items i
     join item_drawings d on d.item_id = i.id
     where i.status = 'published'
+    and (i.publish_at is null or i.publish_at <= now())
     order by i.id`;
 
   // The database gives one row per drawing. Group them: one item, many drawings.

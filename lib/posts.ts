@@ -73,6 +73,7 @@ export async function getPostItems(postId: number): Promise<Item[]> {
     join items i on i.id = pi.item_id
     where pi.post_id = ${postId}
       and i.status = 'published'
+      and (i.publish_at is null or i.publish_at <= now())
     order by pi.position`;
   return rows as Item[];
 }
